@@ -1,9 +1,9 @@
 #########################################################
 Notes on building the R library blighty:- mainly to me.
 
-If you have the blighty_1.00.tar.gz file from the distribution and you have just untarred it and are wondering what to do then you need to run as root (from outside R and in a directory blighty_1.00.tar.gz can be found):
+If you have the blighty_x.y-z.tar.gz file from the distribution and you have just untarred it and are wondering what to do then you need to run as root (from outside R and in a directory blighty_x.y-z.tar.gz can be found):
 
-R CMD INSTALL blighty_1.00.tar.gz
+R CMD INSTALL blighty_x.y-z.tar.gz
 
 which should install blighty for you to the default R library directory - you can safely remove the directory tree you created by unpacking this tarball.
 
@@ -58,3 +58,7 @@ Wish list for version 1.20
 3. cities
 
 copyright David Lucy 15th April 2001 - dlucy@maths.ed.ac.uk
+
+
+
+As of version 2.0-0 points 1 and 2 above have been handled - Northern Isles added - Scillies added - Lundy added - some rivers and lakes added - Ireland maps are complete - I just need an OS type coordinate system for them befor I can add them to the package

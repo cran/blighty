@@ -1,3 +1,6 @@
+# file contains blighty() internal functions
+# Copyright - David Lucy January 2002
+
 # function which gets limits which make the plot square
 # regardless of the shape of the plot area
 # would stand being generalised to producing an arbitary
@@ -60,38 +63,3 @@ ylims <- c(y1lim, y2lim)
 return(xlims, ylims)
 }
 
-
-
-
-# just loads up a vector of all the map names
-getobjectnames <- function()
-{
-objectnames <- c("Border.of.England.and.Scotland",
-"Border.of.England.and.Wales",
-"Coastline.of.Cornwall",
-"Coastline.of.East.Anglia",
-"Coastline.of.Eastern.Scotland",
-"Coastline.of.North.East.England",
-"Coastline.of.North.West.England",
-"Coastline.of.Northern.Scotland",
-"Coastline.of.South.England",
-"Coastline.of.Wales",
-"Coastline.of.Western.Scotland",
-"Isle.of.Anglesea",
-"Isle.of.Arran",
-"Isle.of.Benbecular",
-"Isle.of.Coll",
-"Isle.of.Colonsay",
-"Isle.of.Islay",
-"Isle.of.Jura",
-"Isle.of.Lewis",
-"Isle.of.Man",
-"Isle.of.Mull",
-"Isle.of.North.Uist",
-"Isle.of.Rum",
-"Isle.of.Skye",
-"Isle.of.South.Uist",
-"Isle.of.Tiree",
-"Isle.of.Wight")
-return(objectnames)
-}

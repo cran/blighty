@@ -1,0 +1,6 @@
+"Object"
+"Coastline.of.Wales"
+"Isle.of.Anglesea"
+"Wales.Lake.Claerwen.Craug.Gock.Reservoirs"
+"Wales.Lake.Llyn.Brianne.Reservoir"
+"Wales.River.Usk"
