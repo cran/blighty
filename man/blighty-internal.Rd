@@ -31,4 +31,4 @@
 \alias{Isle.of.Wight}
 \description{These are internal functions and should not be used directly, although it won't do any harm were one to do so.}
 \author{David Lucy}
-\keyword{misc}
+\keyword{internal}

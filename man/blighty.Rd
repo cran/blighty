@@ -17,10 +17,9 @@
 
 \value{returns "Map complete" when finished.}
 
-\author{David Lucy <\email{dlucy@maths.ed.ac.uk}> 
+\author{David Lucy <\email{dlucy@maths.ed.ac.uk}>}
 
 \note{
-
 Inspired by the package \code{oz}. The original coordinates were taken from a scan of a map of England, Scotland and Wales in my 1936 edition of \emph{The World of Wonder} to avoid any copyright problems. The scan was then imported into \bold{xfig} and the coastline and internal boundarys were digitised using the polyline function. Each section of coastline was then saved as seperate file. A small amount of hand editing of each file allows them to be read in as coordinate points in \bold{R} (functions availible from the author). The problem with using such an early work from which to take the primary image is that bits which were present then may not be now as coastal errosion may have affected the East of England.
 
 The coordinate system was taken from various easily recognisable points of the UK coastline. The calculated error on these is in 100s of metres, but I suspect the real error is far greater. Still, most features for which a grid reference from an Ordinance Survey map can be plotted on easily.
@@ -31,17 +30,23 @@ There is a slight error when plotting England as a bit of the South-East coast o
 
 Don't use the \code{xlimits} and \code{ylimits} to zoom in too far as the point resolution isn't really up to it.
 
-It can also take a few minutes when drawing the whole of the United Kingdom, this is mainly because of the west coast of Scotland and Western Isles which because of their shape take up loads of data points.
+It can also take a few seconds when drawing the whole of the United Kingdom, this is mainly because of the west coast of Scotland and Western Isles which because of their shape take up loads of data points.
 }
 
 \examples{
 blighty()		# UK coastline
 blighty(grid=TRUE)	# UK coastline with grid
+points(399,91)		# add in Poole OS coords last digit is 1km
+text(400,50,"Poole")
+
 blighty("Scotland")	# Scotland and the Western Isles
+points(327, 672)	# OS coords for Authurs Seat
+text(327, 655, "Edinburgh")
+
 blighty("Wales")	# Wales and Anglesey
 
 blighty("England", xlimits=c(400,600), ylimits=c(50, 200))
 box()			# south of England and the Isle of Wight
 			# and the Thames Estuary}
 
-\keyword{misc}
+\keyword{hplot}
