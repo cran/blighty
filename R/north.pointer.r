@@ -1,5 +1,5 @@
 # Function to add a simple north-pointer to a blighty() map
-# Copyright - David Lucy January 2002
+# Copyright - David Lucy January 2006
 
 north.pointer <- function(pos=AUTO)
 {

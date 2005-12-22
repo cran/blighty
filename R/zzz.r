@@ -1,3 +1,7 @@
-
-cat("\nLoading blighty version 2.0-0\n")
-cat("Copyright David Lucy 2001-2002\n\n")
+data(set.British.Isles, package="blighty")
+data(set.England, package="blighty")
+data(set.Ireland, package="blighty")
+data(set.Scotland, package="blighty")
+data(set.Wales, package="blighty")
+cat("\nLoading blighty version 3.0-0\n")
+cat("Copyright David Lucy 2001-2006\n\n")

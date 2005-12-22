@@ -1,5 +1,5 @@
 # file contains blighty() internal functions
-# Copyright - David Lucy January 2002
+# Copyright - David Lucy January 2006
 
 # function which gets limits which make the plot square
 # regardless of the shape of the plot area
@@ -60,6 +60,7 @@ if(fig.ratio < plot.ratio)
 xlims <- c(x1lim, x2lim)
 ylims <- c(y1lim, y2lim)
 
-return(xlims, ylims)
+op <- list(xlims, ylims); names(op) <- c("xlims", "ylims")
+return(op)
 }
 

@@ -1,5 +1,5 @@
 # functions to assist in the creation of featuresets for blighty()
-# Copyright - David Lucy January 2002
+# Copyright - David Lucy January 2006
 
 # converts fig files with the preamble removed to long
 # lists of x-y coordinate pairs

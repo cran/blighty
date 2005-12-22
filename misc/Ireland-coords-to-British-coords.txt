@@ -1,0 +1,26 @@
+6 degrees West is at 155km British and 326.8km Irish
+53 degrees North is 344.75km British and 197.32km Irish
+
+X longitude
+
+British to Irish +171.8
+Irish to British -171.8
+
+Y lattitude
+
+British to Irish -147.43
+Irish to British +147.43
+	
+
+	Irish	British
+X min	22.77	-149.03
+X max	366.96	195.16
+Y min	19.20	166.63
+Y max	460.27	607.70
+
+
+Object codes
+1	0	landmass
+2	0	lakes
+3	0	linear objects
+

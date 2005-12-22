@@ -51,10 +51,6 @@ R CMD INSTALL blighty
 ######################################################
 Wish list for version 1.20
 
-1. Inclusion of scale (imp miles and ks) and North pointer
-
-2. shading of land - nice if possible
-
 3. cities
 
 copyright David Lucy 15th April 2001 - dlucy@maths.ed.ac.uk
@@ -62,3 +58,6 @@ copyright David Lucy 15th April 2001 - dlucy@maths.ed.ac.uk
 
 
 As of version 2.0-0 points 1 and 2 above have been handled - Northern Isles added - Scillies added - Lundy added - some rivers and lakes added - Ireland maps are complete - I just need an OS type coordinate system for them befor I can add them to the package
+
+
+Ireland has been added as from version 3

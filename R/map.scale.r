@@ -1,5 +1,5 @@
 # Function to add a simple bar scale to a blighty() map
-# Copyright - David Lucy January 2002
+# Copyright - David Lucy January 2006
 
 map.scale <- function(pos=AUTO, width=1)
 {

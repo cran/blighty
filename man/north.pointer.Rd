@@ -14,7 +14,7 @@
 
 \value{No return value}
 
-\author{David Lucy <\email{dlucy@maths.ed.ac.uk}>\url{http://www.maths.ed.ac.uk/~dlucy/}}
+\author{David Lucy <\email{d.lucy@lancaster.ac.uk}>\url{http://www.maths.lancs.ac.uk/~lucy/}}
 
 \note{Draws a simple North pointer on a map. The postion refers to the centre of the \emph{N} on the pointer.
 

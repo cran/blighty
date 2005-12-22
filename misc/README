@@ -1,4 +1,4 @@
-Copyright - David Lucy January 2002
+Copyright - David Lucy May 2007
 
 This is the readme for the misc functions for the package blighty() a function designed to draw the coastline of the British Isles from within the R statistical environment.
 
@@ -12,8 +12,8 @@ The reason xfig is used is I don't have a digitising tablet - and this is a quic
 
 The bit not covered by the annotation in functions.r and scillies.r is how to get your new maps to work with blighty(). You can use them manually by using plot() and points(feature, type="l") adjusting the xlims and ylims to keep squares looking square, or, the really vital function is the blighty.internal function sqlimits() which will calculate these for you from a set of first order approximations. You can if you wish just replace the features referred to in getobjectnames() in functions.r with your own set, and edit the blighty.r file to plot up this set. Of course you need to be root to do this.
 
-With the new improved blighty() for V1.2 the function reads in a file a set specifying the objects to be drawn on the map. The object and the set. files can be either in the /data directory of the package, or, in the /data directory of the working directory, so in short simply create a directory of all the object files, and place a .set file in it. Change to the directory above the /data directory, making it the working directory, fire up R, library(blighty), and the .set should be availible to send to blighty. So for the example set.Scilly.txt you invoke it like blighty(place="set.Scilly"), and you will get the Scillies and Cornwall. You can get rid of the Cornwall object, and simply get the Scillies. You can get your own objects and create a .set file of objects which include the objects in blighty().
+With the new improved versions of blighty() (V1.2 on) the function reads in a file a set specifying the objects to be drawn on the map. The object and the set. files can be either in the /data directory of the package, or, in the /data directory of the working directory, so in short simply create a directory of all the object files, and place a .set file in it. Change to the directory above the /data directory, making it the working directory, fire up R, library(blighty), and the .set should be availible to send to blighty. So for the example set.Scilly.txt you invoke it like blighty(place="set.Scilly"), and you will get the Scillies and Cornwall. You can get rid of the Cornwall object, and simply get the Scillies. You can get your own objects and create a .set file of objects which include the objects in blighty().
 
 The .set file is simply a listing of the objects in the map. An example is set.Scilly.txt in this directory. It's first line must be something other than an object name, this is because data(list = object) uses read.table(header=T) so the first line is taken to be the variable name. I use "Objects" as the first line. You can have .sets of any drawable object.
 
-Any useful modifications, or featuresets, which you think it would be appropriate to include in future releases of blighty() contact the author - David Lucy <dlucy@maths.ed.ac.uk>.
+Any useful modifications, or featuresets, which you think it would be appropriate to include in future releases of blighty() contact the author - David Lucy <d.lucy@lancaster.ac.uk>.

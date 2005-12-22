@@ -1,9 +1,11 @@
-# the blighty package by David Lucy - plots the coastline of the British Isles
-# sadly doesn't do Ireland as I don't have the OS coordinates for Ireland.
-# Copyleft - David Lucy January 2002
+# the blighty package bydata David Lucy - plots the coastline and some 
+# internal features of the British Isles
+# now does Ireland in V3
+# Copyleft - David Lucy January 2006
 
 blighty <- function(
-		    place="set.UK",
+		    place="set.British.Isles",
+		    set="TRUE", 		# standard set or vector of objects
 		    grid=FALSE,
 		    xlimits, 
 		    ylimits,
@@ -25,19 +27,75 @@ blighty <- function(
 		    grdwdh=1)			# width of grid lines
 
 {
-cat("\nPlotting ", place, " be patient ...\n")
 
-# get the vector of objectnames from the set file
-data(list = place)
-objectnames <- as.vector(get(place)[,1])
+# means the set specified is one of the standard sets of objects
+# thus the objectnames can be read straight in from the set file
+# and we don't have to test the objects to see whether they
+# actually exist or not
+	if(set == TRUE)
+		{
+		cat("\nPlotting ", place, " be patient ...\n")
 
-# assign the number of objects in the set
-noobjects <- length(objectnames)
+		# get the vector of objectnames from the set file
+		data(list = place)
+		objectnames <- as.vector(get(place)[,1])
+		non.existant.objects <- NULL
 
-# read in the data from the object files
-data(list = objectnames)
+		# assign the number of objects in the set
+		noobjects <- length(objectnames)
 
-cat("Data loaded ...\n")
+		# read in the data from the object files
+		data(list = objectnames)
+
+		cat("Data loaded ...\n")
+		}
+
+
+# means the set specified is not one of the standard sets of objects
+# we now need to see whether the objects exist or not as place will be a
+# vector of objects rather than a string representing a set of vectors of 
+# objects
+# we assume here that the object being refered to by place is an array of strings
+# with no col.name
+	if(set == FALSE)
+		{
+		cat("\nPlotting ", place, " be patient ...\n")
+		objectnames <- NULL
+		non.existant.objects <- NULL
+
+		# important to assign the place to an actual vector
+		# of names
+		tmp.objectnames <- get(place)
+
+
+		# make sure that objects appear one only
+		tmp.objectnames <- unique(as.character(tmp.objectnames))
+		tmp.noobjects <- length(tmp.objectnames)
+
+
+		# index through the place names and see whether
+		# the objects exist for them in the data
+		for(ctr in 1:tmp.noobjects)
+			{
+			does.object.exist <- suppressWarnings(exists(data(list = tmp.objectnames[ctr])))
+
+			if(does.object.exist == TRUE)
+				{objectnames[length(objectnames) + 1] <- tmp.objectnames[ctr]}
+
+			if(does.object.exist == FALSE)
+				{non.existant.objects[length(non.existant.objects) + 1] <- tmp.objectnames[ctr]}
+			}
+
+		noobjects <- length(objectnames)
+		cat("Data loaded ...\n")
+		}
+
+
+# make sure that there is at least one valid object to plot - if not exit
+if(length(objectnames) < 1){stop("No objects to plot - try another set or vector of placenames")}
+
+#print(objectnames)
+#stop("TEST STOP")
 
 	# calculate x limits if not specified by the user
 	# these are calculated from the map objects themselves
@@ -165,8 +223,8 @@ if(grid == "TRUE")
 	}
 
 # send the information to the global environment
-blighty.mapinfo <- list(lims$xlims, lims$ylims, objectnames)
-names(blighty.mapinfo) <- c("xlims", "ylims", "maps.used")
+blighty.mapinfo <- list(lims$xlims, lims$ylims, objectnames, non.existant.objects)
+names(blighty.mapinfo) <- c("xlims", "ylims", "objects.used", "objects.not.found")
 assign("blighty.mapinfo", blighty.mapinfo, env=.GlobalEnv)
 
 # do a bit of tidying up

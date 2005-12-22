@@ -15,7 +15,7 @@
 
 \value{No return value}
 
-\author{David Lucy <\email{dlucy@maths.ed.ac.uk}>\url{http://www.maths.ed.ac.uk/~dlucy/}}
+\author{David Lucy <\email{d.lucy@lancaster.ac.uk}>\url{http://www.maths.lancs.ac.uk/~lucy/}}
 
 \note{This function draws a simple bar for a scale with the length of the bar in km beneath it. \code{AUTO} (default) draws the scale in the North-East corner of the map. \code{select} prompts for locator to allow the user to place the \emph{centre} of the scale manually. If you send a vector then the vector gives the position of the \emph{centre} of the scale.
 
