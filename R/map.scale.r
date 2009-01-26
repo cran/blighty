@@ -1,10 +1,23 @@
 # Function to add a simple bar scale to a blighty() map
 # Copyright - David Lucy January 2006
 
-map.scale <- function(pos=AUTO, width=1)
+map.scale <- function(pos="AUTO", width=1)
 {
 # positively associate a value with a missing item
 if(missing(pos)){pos <- "AUTO"}
+
+# check for the existence of blighty.mapinfo - stop if not
+# the complication comes about because R CMD check generates
+# a query if no blighty.mapinfo - so the trick is to create and
+# destroy it - then hop out map.scale() with an appropriate error
+if(!exists("blighty.mapinfo"))
+{
+blighty.mapinfo <- NULL
+rm(blighty.mapinfo)
+stop("blighty.mapinfo non existent: run blighty() before map.scale()")
+}
+
+
 
 # calculate base x and y for automatic selection of position
 	if(pos == "AUTO")

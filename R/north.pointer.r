@@ -1,10 +1,21 @@
 # Function to add a simple north-pointer to a blighty() map
 # Copyright - David Lucy January 2006
 
-north.pointer <- function(pos=AUTO)
+north.pointer <- function(pos="AUTO")
 {
 # positively associate a value with a missing item
 if(missing(pos)){pos <- "AUTO"}
+
+# check for the existence of blighty.mapinfo - stop if not
+# the complication comes about because R CMD check generates
+# a query if no blighty.mapinfo - so the trick is to create and
+# destroy it - then hop out north.pointer() with an appropriate error
+if(!exists("blighty.mapinfo"))
+{
+blighty.mapinfo <- NULL
+rm(blighty.mapinfo)
+stop("blighty.mapinfo non existent: run blighty() before north.pointer()")
+}
 
 # calculate base x and y for automatic selection of position
 	if(pos == "AUTO")
