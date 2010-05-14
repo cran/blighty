@@ -43,7 +43,7 @@ The original coordinates were taken from a scan of a map of England, Scotland an
 
 The coordinate system was taken from various easily recognisable points of the UK coastline. The calculated error on these is in 100s of metres, the real error from comparison is about 3km. Still, most features for which a grid reference from an Ordinance Survey map can be plotted on easily.
 
-For \code{blighty_3-0.0} Irish features have been added. However, the Irish Ordinance Survey grid and the United Kingdom Ordinance Survey grid are entirely different, so were difficult to tie together. See the text file in the \code{/misc} directory
+For \code{blighty_3-0.0} Irish features have been added. However, the Irish Ordinance Survey grid and the United Kingdom Ordinance Survey grid are entirely different, so were difficult to tie together. See the text file in the \code{/misc} directory. \code{blighty_3-1.0} has some of the Scottish Isles revised. Several people had pointed out that Jura was missing.
 
 Don't use the \code{xlimits} and \code{ylimits} to zoom in too far as the point resolution isn't really up to it. There is now a warning for this - basically the maps start to look bad at anything less than 200km.
 
@@ -58,7 +58,7 @@ Additional place sets are: \code{"set.UK"}, \code{"set.England"}, \code{"set.Wal
 
 \seealso{\code{\link{map.scale}} \code{\link{north.pointer}} \code{\link[oz]{oz}}}
 
-\section{Acknowledgements}{Dr. Breedette Hayes of Dublin}
+\section{Acknowledgements}{Dr. Breedette Hayes of Dublin, for the Irish coordinates, and Dr. Mandy Jay of the Department of Archaeology, University of Sheffield, for some of the detail work on the Scottish Western Isles.}
 
 \examples{
 blighty()		# British Isles coastline
