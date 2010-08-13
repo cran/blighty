@@ -19,7 +19,10 @@
 \alias{Hebrides.Arran}
 \alias{Hebrides.Barra}
 \alias{Hebrides.Benbecular}
+\alias{Hebrides.Bute}
 \alias{Hebrides.Coll}
+\alias{Hebrides.Colonsay}
+\alias{Hebrides.Inchmarnock}
 \alias{Hebrides.Islay}
 \alias{Hebrides.Jura}
 \alias{Hebrides.Lewis}
