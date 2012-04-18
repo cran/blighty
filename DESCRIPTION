@@ -1,12 +1,12 @@
 Package: blighty
-Version: 3.1-2
-Date: 2010/08/13
+Version: 3.1-4
+Date: 2012/04/18
 Title: United Kingdom coastlines
 Author: David Lucy <d.lucy@lancaster.ac.uk>
 Maintainer: David Lucy <d.lucy@lancaster.ac.uk>
 Description: Function for drawing the coastline of the British Isles
 Depends: utils
 License: GPL-2
-Packaged: 2010-08-13 09:00:20 UTC; lucy
+Packaged: 2012-04-17 13:01:26 UTC; lucy
 Repository: CRAN
-Date/Publication: 2010-08-13 18:30:45
+Date/Publication: 2012-04-17 14:45:23

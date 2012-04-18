@@ -1,7 +1,0 @@
-data(set.British.Isles, package="blighty")
-data(set.England, package="blighty")
-data(set.Ireland, package="blighty")
-data(set.Scotland, package="blighty")
-data(set.Wales, package="blighty")
-cat("\nLoading blighty version 3.0-1\n")
-cat("Copyright David Lucy 2001-2010\n\n")

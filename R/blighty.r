@@ -225,7 +225,7 @@ if(grid == "TRUE")
 # send the information to the global environment
 blighty.mapinfo <- list(lims$xlims, lims$ylims, objectnames, non.existant.objects)
 names(blighty.mapinfo) <- c("xlims", "ylims", "objects.used", "objects.not.found")
-assign("blighty.mapinfo", blighty.mapinfo, env=.GlobalEnv)
+assign("blighty.mapinfo", blighty.mapinfo, envir=.GlobalEnv)
 
 # do a bit of tidying up
 rm(list = objectnames, envir = .GlobalEnv)
